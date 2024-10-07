@@ -49,9 +49,9 @@ body {
 
 .page-content {  
     display: flex;  
-    flex-direction: column; /* Arrange the content vertically */  
-    align-items: flex-start; /* align */  
-    gap: 10px; /* spacing */  
+    flex-direction: column; /* 使内容竖直排列 */  
+    align-items: flex-start; /* 对齐方式 */  
+    gap: 10px; /* 间距 */  
 }  
 
 input[type="text"],  
@@ -220,11 +220,11 @@ button:hover {
     margin-top: 10px;  
   }  
   footer {  
-    background-color: #000000; /* Light gray background */  
-    text-align: center; /* Center the content (but in this case, we have already set it in. footer content) */  
-    padding: 10px 0; /* Bottom and top margins of footer */  
-    font-family: Arial, sans-serif; /* set font */  
-    color: #ffffff; /* text color */  
+    background-color: #000000; /* 浅灰色背景 */  
+    text-align: center; /* 使内容居中（但在这个案例中，我们已经在.footer-content中设置了） */  
+    padding: 10px 0; /* 页脚上下内边距 */  
+    font-family: Arial, sans-serif; /* 设置字体 */  
+    color: #ffffff; /* 文本颜色 */  
 }  
   
 .footer-content p {  
@@ -331,6 +331,6 @@ button:hover {
 .home-content p {  
     color: #666; /* Set Font Color */  
     font-size: 16px; /* Set font size */  
-    line-height: 1.5; /*line-height */  
+    line-height: 1.5; /* line-height */  
     margin-bottom: 20px; /* Set the bottom margin */  
 }
