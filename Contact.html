@@ -1,0 +1,70 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>About Us</title>  
+<link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+  
+    <div class="header">
+        <img src="1.png" alt="logo" class="left-image">  
+        <h1>Australian IT Training Solutions Pty Ltd</h1>   
+      </div>    
+        <div class="topnav">  
+            <a href="index.html" onclick="showPage('createUserPage')">Create User</a>  
+            <a href="index.html" onclick="showPage('loginPage')">Login</a> 
+            <a href="home.html">Home</a>  
+            <a href="About Us.html">About Us</a>
+            <a href="Contact.html">Contact</a>  
+          </div> 
+          <div class="flex-container">  
+            <div class="photo-with-description">  
+              <h2 class="support-flowchart-title">1. Service Commitment</h2>  
+              <p>We promise to provide professional and enthusiastic service attitude to ensure that every customer can have a satisfactory service experience.</p>  
+              <p>We solemnly promise to uphold the principles of integrity and efficiency, and provide you with the highest quality service until you are completely satisfied.</p>  
+              <img src="C.jpg" alt="Support Flowchart Image" class="service-flowchart-image">  
+              <!-- You can add more explanations or pictures about the service process here -->  
+            </div>  
+            <div class="contact-info">  
+                <h3>2. Contact information</h3>  
+                <p>Introduce</p>  
+                <p>Welcome to Our RTO Website!</p>  
+                <p>Phone number: <span>123-456-7890</span></p>  
+                <p>Email address: <a href="mailto:info@smarttechrto.com">info@smarttechrto.com</a></p>  
+              
+                <!-- Add online forms here -->  
+                <form id="contactForm">  
+                    <label for="name">Name:</label>  
+                    <input type="text" id="name" name="name" required>  
+                    
+                    <label for="email">Email:</label>  
+                    <input type="email" id="email" name="email" required>  
+                    
+                    <label for="company">Company:</label>  
+                    <input type="text" id="company" name="company" required>  
+                    
+                    <label for="phone">Phone:</label>  
+                    <input type="tel" id="phone" name="phone" required>  
+                    
+                    <label for="website">Website:</label>  
+                    <input type="url" id="website" name="website" required>  
+                    
+                    <label for="message">Message:</label>  
+                    <textarea id="message" name="message" required></textarea>  
+                    
+                    <button type="submit">Submit</button>  
+                  </form>
+              
+                <!-- Display successful submission message (if needed) -->  
+                <div id="successMessage" style="display: none;">Submission successful!</div>  
+              </div>  
+            </div>
+            <footer>  
+              <div class="footer-content">  
+                  <p>© Leo 2023. All rights reserved.</p>  
+              </div>  
+          </footer>     
+            </body>  
+            </html>
