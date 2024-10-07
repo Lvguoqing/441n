@@ -220,11 +220,11 @@ button:hover {
     margin-top: 10px;  
   }  
   footer {  
-    background-color: #000000; /* 浅灰色背景 */  
-    text-align: center; /* 使内容居中（但在这个案例中，我们已经在.footer-content中设置了） */  
-    padding: 10px 0; /* 页脚上下内边距 */  
-    font-family: Arial, sans-serif; /* 设置字体 */  
-    color: #ffffff; /* 文本颜色 */  
+    background-color: #000000; 
+    text-align: center;  
+    padding: 10px 0;  
+    font-family: Arial, sans-serif; 
+    color: #ffffff;   
 }  
   
 .footer-content p {  
