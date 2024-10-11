@@ -13,8 +13,8 @@
         <h1>Australian IT Training Solutions Pty Ltd</h1>   
       </div>    
       <div class="topnav">  
-        <a href="index.html" onclick="showPage('createUserPage')">Create User</a>  
-        <a href="login.html" onclick="showPage('loginPage')">Login</a> 
+        <a href="index.html" onclick="page('createUserPage')">Create User</a>  
+        <a href="login.html" onclick="page('loginPage')">Login</a> 
         <a href="home.html">Home</a>  
         <a href="About Us.html">About Us</a>
         <a href="Contact.html">Contact</a>  
@@ -25,7 +25,7 @@
         <div class="page-content"> <!-- Add a container to wrap the content --> 
         <input type="text" id="username" placeholder="Enter your English username">  
         <input type="password" id="password" placeholder="Enter your numeric password">  
-        <button onclick="createUser()">Create User</button> 
+        <button onclick="create()">Create User</button> 
         <!-- Perhaps additional content or intervals may need to be added here -->   
         </div>  
         <img src="a.jpg" alt="描述性文本" width="500" height="300">
@@ -40,9 +40,9 @@
         <!-- Login page -->  
         <h2>Login</h2>  
         <div class="page-content">
-        <input type="text" id="loginUsername" placeholder="Enter your English username">  
-        <input type="password" id="loginPassword" placeholder="Enter your numeric password">  
-        <button onclick="login()">Login</button> 
+        <input type="text" id="signinUsername" placeholder="Enter your English username">  
+        <input type="password" id="signinPassword" placeholder="Enter your numeric password">  
+        <button onclick="signin()">Login</button> 
         </div>
         <img src="a.jpg" alt="描述性文本" width="500" height="300"> 
         <footer>  
