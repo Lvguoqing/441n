@@ -1,28 +1,6 @@
 // I am Leo
 // Define an empty array to store user information  
-function init() {  
-    var bodyClass = document.body.className;  
-      
-    // Hide all pages by default  
-    var pages = document.querySelectorAll('.page');  
-    for (var i = 0; i < pages.length; i++) {  
-        pages[i].style.display = 'none';  
-    }  
-      
-    // Show the appropriate page based on the body class  
-    if (bodyClass.includes('index-page')) {  
-        showPage('createUserPage');  
-    } else if (bodyClass.includes('login-page')) {  
-        showPage('loginPage');  
-    }  
-}  
-  
-/**  
- * Display the page with the specified ID and hide all other pages  
- *  
- * @param {string} pageId - The ID of the page to be displayed  
- */  
-function showPage(pageId) {  
+function page(pageId) {  
     // Hide all pages  
     var pages = document.querySelectorAll('.page');  
     for (var i = 0; i < pages.length; i++) {  
@@ -34,10 +12,74 @@ function showPage(pageId) {
         page.style.display = 'block';  
     }  
 }  
+
   
-// Call the init function when the page loads  
-window.onload = init;
+/**  
+ * Display the page with the specified ID and hide all other pages  
+ *  
+ * @param {string} pageId - The ID of the page to be displayed  
+ */  
+
+// Call the init function when the page loads 
+window.onload = yy;
+
+function yy() {  
+    var bodyClass = document.body.className;  
+      
+    // Hide all pages by default  
+    var pages = document.querySelectorAll('.page');  
+    for (var i = 0; i < pages.length; i++) {  
+        pages[i].style.display = 'none';  
+    }  
+      
+    // Show the appropriate page based on the body class  
+    if (bodyClass.includes('index-page')) {  
+        page('createUserPage');  
+    } else if (bodyClass.includes('login-page')) {  
+        page('loginPage');  
+    }  
+}  
+
+
+function create() {  
+    
+    var username = document.getElementById("username").value;  
+    var password = document.getElementById("password").value;  
+
   
+    setItemWithExpiry('username', username, 3 * 24 * 60 * 60 * 1000); 
+    setItemWithExpiry('password', password, 3 * 24 * 60 * 60 * 1000); 
+
+ 
+    alert('user ' + username + 'Created successfully!');  
+
+ 
+}  
+  
+/**  
+ * Verify signin information. If correct, redirect to the shopping page. Otherwise, return to the user creation page  
+ */  
+function signin() {  
+     
+    var signinUsername = document.getElementById("signinUsername").value;  
+    var signinPassword = document.getElementById("signinPassword").value;  
+  
+    
+    var storedUsername = getItemWithExpiry('username');  
+    var storedPassword = getItemWithExpiry('password');  
+  
+      
+    if (storedUsername === signinUsername && storedPassword === signinPassword) {  
+        
+        alert('user' + signinUsername + ' signin succeeded！');  
+        page('shoppingPage');  
+    } else {  
+        
+        page('createUserPage');  
+        alert("Invalid username or password. Please try again.");  
+    }  
+}  
+
 function setItemWithExpiry(key, value, ttl) {  
     const now = new Date();  
     
@@ -65,48 +107,9 @@ function getItemWithExpiry(key) {
     }  
     return item.value;  
 }  
-
-function createUser() {  
-    
-    var username = document.getElementById("username").value;  
-    var password = document.getElementById("password").value;  
-
-  
-    setItemWithExpiry('username', username, 3 * 24 * 60 * 60 * 1000); 
-    setItemWithExpiry('password', password, 3 * 24 * 60 * 60 * 1000); 
-
- 
-    alert('user ' + username + 'Created successfully!');  
-
- 
-}  
-  
-/**  
- * Verify login information. If correct, redirect to the shopping page. Otherwise, return to the user creation page  
- */  
-function login() {  
-     
-    var loginUsername = document.getElementById("loginUsername").value;  
-    var loginPassword = document.getElementById("loginPassword").value;  
-  
-    
-    var storedUsername = getItemWithExpiry('username');  
-    var storedPassword = getItemWithExpiry('password');  
-  
-      
-    if (storedUsername === loginUsername && storedPassword === loginPassword) {  
-        
-        alert('user' + loginUsername + ' Login succeeded！');  
-        showPage('shoppingPage');  
-    } else {  
-        
-        showPage('createUserPage');  
-        alert("Invalid username or password. Please try again.");  
-    }  
-}  
   
  
-window.onload = init;  
+window.onload = yy;  
   
 /**  
  * Calculate the total price of items in the shopping cart and display it on the page  
@@ -239,4 +242,3 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // Clear form fields (optional)  
     this.reset();  
   });
-
