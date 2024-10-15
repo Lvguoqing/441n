@@ -242,4 +242,3 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // Clear form fields (optional)  
     this.reset();  
   });
-
