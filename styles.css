@@ -222,7 +222,7 @@ button:hover {
   footer {  
     background-color: #000000; /* Light gray background */  
     text-align: center; /* Center the content (but in this case, we have already set it in. footer content) */  
-    padding: 10px 0; /* Bottom and top margins of footer */  
+    padding: 10px 0; /* Bottom and top margins of footer*/  
     font-family: Arial, sans-serif; /* set font */  
     color: #ffffff; /* text color */  
 }  
@@ -233,6 +233,10 @@ button:hover {
 .centered-heading {  
     text-align: center;  
 }  
+
+.cart-summary{
+    text-align: center;  
+}
   
 .container {  
     width: 100%;  
