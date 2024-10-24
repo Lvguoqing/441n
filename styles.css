@@ -311,30 +311,55 @@ button:hover {
     border-radius: 5px;  
 }  
 /* Style settings for<h3>tags within. home content */  
-.home-content h3 {  
-    color: #333; /* Set Font Color */  
-    font-family: 'Arial', sans-serif; /* set font */  
-    font-size: 24px; /* Set font size */  
-    margin-bottom: 20px; /* Set the bottom margin */  
-    text-align: center; /* Set text centering alignment */  
-    text-transform: uppercase; /* Set text capitalization */  
-    letter-spacing: 1px; /* Set letter spacing */  
-}  
   
-/* Style the<h4>tag within. home content */  
-.home-content h4 {  
-    color: #007BFF; /* Set Font Color */  
-    font-family: 'Georgia', serif; /* set font */  
-    font-size: 20px; /* Set font size */  
-    margin-bottom: 10px; /* Set the bottom margin */  
-    border-bottom: 2px solid #007BFF; /* Set bottom border */  
-    padding-bottom: 5px; /* Set bottom margin */  
-}  
-  
-/* Optional: Fine tune the style of<p>tags within. home content to maintain overall coordination */  
-.home-content p {  
-    color: #666; /* Set Font Color */  
-    font-size: 16px; /* Set font size */  
-    line-height: 1.5; /* line-height */  
-    margin-bottom: 20px; /* Set the bottom margin */  
+.content-container {  
+    display: flex;  
+    flex-direction: row-reverse;  
+    width: 90%;  
+    max-width: 1200px;  
+    margin: 20px auto; 
+    background-color: lightgreen;  
+    padding: 20px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
 }
+  
+.text-box {  
+    flex: 3;  
+    padding-right: 20px;  
+}  
+  
+.image-box {  
+    flex: 1;  
+    text-align: center;  
+}  
+  
+.image-box img {  
+    max-width: 100%;  
+    height: auto;  
+}  
+ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+  
+ul li {  
+    margin-bottom: 20px;  
+}  
+  
+ul li h4 {  
+    margin-top: 0;  
+}  
+
+.container {  
+    display: flex;  
+    flex-direction: column; 
+    align-items: center;   
+    justify-content: center;   
+    border: 2px solid #000;   
+    padding: 20px;  
+    margin: 20px auto;  
+    max-width: 1200px;   
+    background-color: lightgrey; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   
+} 
+/* Additional styling for headings, lists, paragraphs, etc., if needed */
